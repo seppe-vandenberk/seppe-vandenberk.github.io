@@ -37,7 +37,7 @@ export default function Teaching() {
                   Object Oriented Programming (Objectgeoriënteerd programmeren - 4488)
                 </h2>
                 <p className="text-default-600">Hasselt University & KU Leuven — Bachelor of Science in Software Systems Engineering Technology</p>
-                <p className="text-default-500 mt-1">Sep 2024 – Present</p>
+                <p className="text-default-500 mt-1">Sep 2025 – Present</p>
                 <p className="text-default-700 mt-4 text-justify">
                   This course covers a range of concepts and (programming) skills in the context of object-oriented programming and the C++ programming language. It builds on the knowledge and skills already acquired in problem-solving, computational thinking, and coding solutions, specifically the Java and C programming languages. Thanks to the reference framework further expanded and deepened in this course, students can independently learn new object-oriented programming languages ​​and frameworks.
                 </p>
