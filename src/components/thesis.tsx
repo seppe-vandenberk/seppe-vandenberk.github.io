@@ -11,7 +11,6 @@ export type ThesisCardProps = {
   coPromoters?: string[] | string;
   supervisors?: string[] | string;
   faculty?: string;
-  program?: string;
   status?: string;
   documentServerUrl?: string;
   pdfUrl?: string;
@@ -46,7 +45,6 @@ export function ThesisCard({
   coPromoters,
   supervisors,
   faculty,
-  program,
   status,
   documentServerUrl,
   pdfUrl,
