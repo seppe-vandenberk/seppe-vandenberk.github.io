@@ -5,6 +5,7 @@ import { button as buttonStyles } from "@heroui/theme";
 import DefaultLayout from "@/layouts/default";
 import { siteConfig } from "@/config/site";
 import { GithubIcon, LinkedInIcon } from "@/components/icons";
+import { linkedKnownNames } from "@/components/emphasize-name";
 
 export default function IndexPage() {
   // Define your previews here (short blurbs)
@@ -62,7 +63,7 @@ export default function IndexPage() {
             />
             <div>
               <h2 className="text-2xl font-bold mb-2 flex items-center gap-2">
-                Seppe Vandenberk
+                {linkedKnownNames("Seppe Vandenberk")}
                 <a href="mailto:seppe.vandenberk@uhasselt.be" title="Email">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
