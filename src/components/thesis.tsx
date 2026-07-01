@@ -1,4 +1,7 @@
 import { Button } from "@heroui/button";
+import type { ReactNode } from "react";
+
+import { emphasizePersonalName, peopleWithEmphasizedPersonalName } from "./emphasize-name";
 
 export type ThesisType = "Bachelor thesis" | "Master thesis";
 
@@ -21,10 +24,10 @@ function peopleLabel(people?: string[] | string) {
     return undefined;
   }
 
-  return Array.isArray(people) ? people.join(", ") : people;
+  return peopleWithEmphasizedPersonalName(people);
 }
 
-function Detail({ label, value }: { label: string; value?: string }) {
+function Detail({ label, value }: { label: string; value?: ReactNode }) {
   if (!value) {
     return null;
   }
@@ -76,7 +79,7 @@ export function ThesisCard({
             {title}
           </h2>
           <Detail label="Student author" value={studentAuthor} />
-          <Detail label="Promoter" value={promoter} />
+          <Detail label="Promoter" value={emphasizePersonalName(promoter)} />
           <Detail label="Co-promoter" value={peopleLabel(coPromoters)} />
           <Detail label="Supervisor" value={peopleLabel(supervisors)} />
           <Detail label="Faculty" value={faculty} />

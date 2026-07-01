@@ -1,5 +1,7 @@
 import { Button } from "@heroui/button";
 
+import { peopleWithEmphasizedPersonalName } from "./emphasize-name";
+
 export type PresentationCardProps = {
   title: string;
   presenters: string[] | string;
@@ -15,7 +17,7 @@ export type PresentationCardProps = {
 };
 
 function peopleLabel(people: string[] | string) {
-  return Array.isArray(people) ? people.join(", ") : people;
+  return peopleWithEmphasizedPersonalName(people);
 }
 
 export function PresentationCard({

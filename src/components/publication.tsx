@@ -1,5 +1,7 @@
 import { Button } from "@heroui/button";
 
+import { peopleWithEmphasizedPersonalName } from "./emphasize-name";
+
 export type PublicationCardProps = {
   title: string;
   authors: string[] | string;
@@ -13,7 +15,7 @@ export type PublicationCardProps = {
 };
 
 function authorsLabel(authors: PublicationCardProps["authors"]) {
-  return Array.isArray(authors) ? authors.join(", ") : authors;
+  return peopleWithEmphasizedPersonalName(authors);
 }
 
 function filenameFromTitle(title: string, extension: "bib" | "txt") {
